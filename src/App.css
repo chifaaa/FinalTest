@@ -1,0 +1,60 @@
+body{
+  background-color: rgba(61, 1, 21, 0.199);
+}
+.user-app {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  
+}
+
+.user-app-main {
+  margin-top: 20px;
+}
+.users-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.user-card{
+  border: 2px solid black;
+  width: 200px;
+  height: 250px;
+  position: relative;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-image {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGT2sZcbvZVDPb0vLSoYaksKuBpqj-aCAirKGHxmhqPyXmSk6F&s);
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.user-name {
+  border-top: 2px solid black;
+  text-align: center;
+  padding: 10px;
+}
+
+.comment {
+  border: 2px solid black;
+  width: 800px;
+  height: 150px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.post {
+  border: 2px solid black;
+  width: 800px;
+  height: 250px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.fit-picture{
+  width: 50px;
+  height: 50px;
+}
