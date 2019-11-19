@@ -19,15 +19,16 @@ const App = () =>  {
     return (
       <BrowserRouter>
       <div className="user-app">
-        
+
       <main className="user-app-main">
             
       <Route exact path='/' component={UsersList }/>            
-       
+        
       <Route exact path="/posts/:id" component={Posts} /> 
       <Route   path='/comment/:id' component={Comment}/>
-             
-        </main>
+        
+           
+      </main>
       </div>
       </BrowserRouter>
 
