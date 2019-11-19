@@ -15,35 +15,30 @@ class Posts extends Component {
     }
   }
 
-      componentDidMount() {
-        const { match: { params } } = this.props;
 
-        axios.get(`https://jsonplaceholder.typicode.com/posts?userId=${params.id}`)
-            .then(res => {
-                this.setState({
-                    posts: res.data,
 
-                })
-            })
 
-    }
 
+  componentDidMount() {
+    const { match: { params } } = this.props;
+    axios.get('https://jsonplaceholder.typicode.com/posts')
+    .then(res => {
       
        
-//         console.log('resdata :', res.data)
-//         const alias=res.data.filter(it => it.userId ===this.props.match.params.id)
-//         this.setState({
-//           posts: alias
-//         })
-//         console.log('resdata :', this.state.posts)
+        console.log('resdata :', res.data)
+        const alias=res.data.filter(it => it.userId ==params.id)
+        this.setState({
+          posts: alias
+        })
+        console.log('filtered list :', this.state.posts)
+        console.log('paramsid :', params.id)
+    })
+    .catch(err => {
+        // an error happened
+        console.log('OOPS! an error occured')
+    })
 
-//     })
-//     .catch(err => {
-//         // an error happened
-//         console.log('OOPS! an error occured')
-//     })
-
-//   }
+  }
   
   render() {
 
@@ -70,16 +65,7 @@ class Posts extends Component {
 
 
 
-// {/* <div>
-//         {
-//           this.state.posts.map((item) => 
-//           {
-//             return (
-//          <p>{item.id}</p>
-//                 )
-//           })
-//         }
-// </div> */}
+
 
 
       
