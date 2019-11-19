@@ -27,10 +27,7 @@ class Posts extends Component {
             })
 
     }
-//   componentDidMount() {
-//     const { match: { params } } = this.props;
-//     axios.get()
-//     .then(res => {
+
       
        
 //         console.log('resdata :', res.data)
