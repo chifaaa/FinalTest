@@ -7,12 +7,16 @@ class Comment extends Component {
     }
     componentDidMount() {
         const { match: { params } } = this.props;
-        axios.get(`https://jsonplaceholder.typicode.com/comments?postId=${params.id}`)
-            .then(res => {
-                this.setState({
-                    comments: res.data,
+        axios.get('https://jsonplaceholder.typicode.com/comments')
 
-                })
+            .then(res => {
+                console.log('resdata :', res.data)
+                const alias=res.data.filter(it => it.postId ==params.id)
+                
+        this.setState({
+          comments: alias
+        })
+        console.log('state :', this.state.comments)
             })
 
     }
